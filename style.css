@@ -9,7 +9,7 @@
   --background: #f2f4f7;
   --background-secondary: white;
   --background-button: #0866ff;
-  --color-font: rgb(1, 0, 30);
+  --color-font: #020048;
   --color-font-secondary: white;
 }
 
@@ -95,7 +95,7 @@ button {
 }
 
 #form-new-task div h3 {
-  margin: 1rem 0 1rem 0;
+  margin: 0 0 1rem 0;
 }
 
 #form-new-task div {
@@ -113,6 +113,7 @@ button {
   background-color: var(--background-secondary);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
   min-width: 20rem;
+  border-radius: 5px;
 }
 
 #form-new-task div div div {
@@ -128,6 +129,8 @@ button {
 #form-new-task div input {
   width: 90%;
   padding: 5px;
+  border: 1px var(--background-button) solid;
+  border-radius: 5px;
 }
 
 #add_task {
