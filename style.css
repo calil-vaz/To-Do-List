@@ -130,7 +130,7 @@ button {
   padding: 5px;
 }
 
-#add_task_mobile {
+#add_task {
   background: var(--background-button);
   color: var(--color-font-secondary);
   padding: 1.2rem 1.3rem;
@@ -154,7 +154,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #add_task_mobile {
+  #add_task {
     display: block;
     visibility: visible;
   }
