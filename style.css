@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Roboto, system-ui;
+}
+
+:root {
+  --background: #f2f4f7;
+  --background-secondary: white;
+  --background-button: #0866ff;
+  --color-font: rgb(1, 0, 30);
+  --color-font-secondary: white;
+}
+
+body {
+  color: var(--color-font);
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  overflow: auto;
+}
+
+img {
+  width: 15rem;
+  margin: 5rem auto;
+}
+
+h1 {
+  margin: 2rem 0 1rem;
+}
+
+button {
+  color: var(--color-font-secondary);
+  background: var(--background-button);
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  margin: 0 0 1rem;
+}
+
+.container-task {
+  background: var(--background-secondary);
+  border: 1px var(--background-button) solid;
+  border-radius: 5px;
+  width: 85%;
+  max-width: 70rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  margin: 0.3rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.container-task :nth-child(2) {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checked-task {
+  background: rgba(72, 72, 72, 0.166);
+  color: var(rgba(0, 0, 0, 0));
+  list-style: lower-roman;
+  text-decoration: line-through;
+}
+
+#form-new-task {
+  height: 100vh;
+  width: 100vw;
+  background: var(--background);
+  position: absolute;
+  z-index: 1;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  visibility: hidden;
+}
+
+#form-new-task div h3 {
+  margin: 1rem 0;
+}
+
+#form-new-task div {
+  background-color: var(--background-secondary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+#form-new-task div div {
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 90%;
+}
+
+#form-new-task div input {
+  width: 90%;
+  padding: 5px;
+}
+
+#add_task_mobile {
+  background: var(--background-button);
+  color: var(--color-font-secondary);
+  padding: 1.2rem 1.3rem;
+  border-radius: 50%;
+  position: fixed;
+  margin-right: -70vw;
+  margin-top: 83vh;
+  display: none;
+  visibility: hidden;
+  z-index: 1000; /* Mantém o footer acima de outros elementos */
+}
+
+footer {
+  position: fixed;
+  color: var(--color-font);
+  padding: 0.5rem 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  background: var(--background);
+}
+
+@media (max-width: 768px) {
+  #add_task_mobile {
+    display: block;
+    visibility: visible;
+  }
+
+  #button_add_task {
+    display: none;
+    visibility: hidden;
+  }
+
+  #form-new-task div {
+    width: 90%;
+    max-width: 30rem;
+  }
+}
