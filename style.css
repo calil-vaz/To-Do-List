@@ -110,6 +110,7 @@ button {
   justify-content: space-between;
   flex-direction: row;
   width: 90%;
+  box-shadow: none;
 }
 
 #form-new-task div input {
