@@ -1,5 +1,5 @@
 const button_add_task = document.getElementById("button_add_task");
-const add_task_mobile = document.getElementById("add_task_mobile");
+const add_task = document.getElementById("add_task");
 const form_new_task = document.getElementById("form-new-task");
 const button_cancel_task = document.getElementById("cancel_task");
 const input_new_task = document.getElementById("input_new_task");
@@ -75,12 +75,8 @@ window.addEventListener("load", function () {
 });
 
 // Open form to create task
-button_add_task.addEventListener("click", function () {
-  form_new_task.style.display = "flex";
-  form_new_task.style.visibility = "visible";
-});
 
-add_task_mobile.addEventListener("click", function () {
+add_task.addEventListener("click", function () {
   form_new_task.style.display = "flex";
   form_new_task.style.visibility = "visible";
 });
@@ -92,7 +88,6 @@ button_cancel_task.addEventListener("click", function () {
   form_new_task.style.visibility = "hidden";
 });
 
-// Exemplo de uso: Adicionando uma nova tarefa
 save_task.addEventListener("click", function () {
   if (input_new_task.value == "") {
     Toastify({
