@@ -19,6 +19,16 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
+}
+
+img#logo {
+  margin: 0;
+  width: 5rem;
+}
+
+img#logo-form {
+  width: 8rem;
 }
 
 main {
@@ -26,17 +36,12 @@ main {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   overflow: auto;
 }
 
-img {
-  width: 15rem;
-  margin: 5rem auto;
-}
-
 h1 {
-  margin: 2rem 0 1rem;
+  margin: 0rem 0 1rem;
 }
 
 button {
@@ -84,33 +89,40 @@ button {
   flex-direction: column;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   display: none;
   visibility: hidden;
 }
 
 #form-new-task div h3 {
-  margin: 1rem 0;
+  margin: 1rem 0 1rem 0;
 }
 
 #form-new-task div {
-  background-color: var(--background-secondary);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 50%;
+  margin: auto;
 }
 
 #form-new-task div div {
+  box-shadow: none;
+  background-color: var(--background-secondary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  min-width: 20rem;
+}
+
+#form-new-task div div div {
   margin-top: 1rem;
   padding: 0.5rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
-  width: 90%;
   box-shadow: none;
+  margin: auto;
 }
 
 #form-new-task div input {
@@ -124,11 +136,9 @@ button {
   padding: 1.2rem 1.3rem;
   border-radius: 50%;
   position: fixed;
-  margin-right: -70vw;
+  margin-right: -80vw;
   margin-top: 83vh;
-  display: none;
-  visibility: hidden;
-  z-index: 1000; /* Mantém o footer acima de outros elementos */
+  z-index: 1000;
 }
 
 footer {
@@ -157,5 +167,9 @@ footer {
   #form-new-task div {
     width: 90%;
     max-width: 30rem;
+  }
+
+  #form-new-task div div {
+    min-width: 90%;
   }
 }
